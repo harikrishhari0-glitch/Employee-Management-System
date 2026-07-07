@@ -1,0 +1,169 @@
+{
+  "info": {
+    "name": "EMS Leave Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\": \"admin@company.com\", \"password\": \"admin\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/login",
+              "host": [
+                "http://localhost:8080/api/auth/login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Current User",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/auth/me",
+              "host": [
+                "http://localhost:8080/api/auth/me"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Employee",
+      "item": [
+        {
+          "name": "Apply Leave",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"leaveType\": \"Sick Leave\", \"startDate\": \"2026-10-01\", \"endDate\": \"2026-10-02\", \"reason\": \"Not feeling well\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/leaves/apply",
+              "host": [
+                "http://localhost:8080/api/leaves/apply"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Leave History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/leaves/history",
+              "host": [
+                "http://localhost:8080/api/leaves/history"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Leave Balance",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/leaves/balance",
+              "host": [
+                "http://localhost:8080/api/leaves/balance"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Get All Leaves",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/admin/leaves",
+              "host": [
+                "http://localhost:8080/api/admin/leaves"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Approve Leave",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"remark\": \"Approved by Admin\"}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/admin/approve/1",
+              "host": [
+                "http://localhost:8080/api/admin/approve/1"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
