@@ -1,0 +1,64 @@
+:root {
+
+  /* ===========================
+     COLORS
+  =========================== */
+
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+  --primary-light: #60A5FA;
+
+  --background: #08111F;
+  --left-panel: #0D1728;
+  --right-panel: #08111F;
+
+  --card: #15243C;
+  --card-hover: #1A2C49;
+
+  --input: #16253E;
+  --input-border: rgba(255,255,255,.08);
+
+  --text: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-light: #CBD5E1;
+
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  --shadow:
+      0 10px 40px rgba(0,0,0,.35);
+
+  --shadow-light:
+      0 5px 18px rgba(0,0,0,.18);
+
+  --gradient:
+
+      linear-gradient(
+      135deg,
+      #4F8DFF,
+      #2B6CF8
+      );
+
+  --gradient-dark:
+
+      linear-gradient(
+      180deg,
+      #0D1728,
+      #08111F
+      );
+
+  /* ===========================
+      BORDER RADIUS
+  =========================== */
+
+  --radius-sm:12px;
+  --radius-md:18px;
+  --radius-lg:24px;
+  --radius-xl:32px;
+
+  
+
+  --transition:.25s ease;
+
+}

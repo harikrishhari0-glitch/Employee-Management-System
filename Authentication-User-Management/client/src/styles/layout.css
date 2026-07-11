@@ -1,0 +1,53 @@
+/* ==========================================
+   GLOBAL PAGE LAYOUT
+========================================== */
+
+.page-container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+.page-content{
+    flex:1;
+    width:100%;
+}
+
+.section{
+    width:100%;
+    padding:60px 0;
+}
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.flex-between{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+@media(max-width:992px){
+
+    .grid-2,
+    .grid-3{
+        grid-template-columns:1fr;
+    }
+
+}
