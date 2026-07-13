@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { employeeService } from '../../services/api';
 import { toast } from 'react-toastify';
 import { Calendar, Plus, HelpCircle } from 'lucide-react';
+import ApplyLeaveModal from '../../components/ApplyLeaveModal';
 
 const Dashboard = () => {
     const [balances, setBalances] = useState([]);
     const [history, setHistory] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -72,7 +74,7 @@ const Dashboard = () => {
     const usageData = months.map(m => ({ month: m, count: 0, color: 'bg-blue-500' }));
     
     history.forEach(h => {
-        if (h.status === 'APPROVED' || h.status === 'PENDING') {
+        if (h.status?.toUpperCase() === 'APPROVED' || h.status?.toUpperCase() === 'PENDING') {
             const d = new Date(h.startDate);
             const mIdx = d.getMonth();
             if (!isNaN(mIdx)) {
@@ -95,7 +97,7 @@ const Dashboard = () => {
                         <p className="text-slate-400 text-sm mt-1">Apply for leave and track your balance</p>
                     </div>
                     <button 
-                        onClick={() => navigate('/employee/apply-leave')}
+                        onClick={() => setIsModalOpen(true)}
                         className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors shadow-sm shadow-blue-500/20"
                     >
                         <Plus size={18} /> Apply for Leave
@@ -206,7 +208,7 @@ const Dashboard = () => {
                         {usageData.map((d, i) => {
                             const height = `${(d.count / maxUsage) * 100}%`;
                             return (
-                                <div key={i} className="flex flex-col items-center w-full relative z-10 group">
+                                <div key={i} className="flex flex-col items-center justify-end w-full h-full relative z-10 group">
                                     {d.count > 0 && (
                                         <div 
                                             className={`w-2 md:w-3 rounded-t-sm ${d.color} transition-all duration-300 group-hover:opacity-80 group-hover:w-3 md:group-hover:w-4`}
@@ -229,6 +231,13 @@ const Dashboard = () => {
             <button className="fixed bottom-6 right-6 p-3 bg-slate-800 border border-slate-700 text-slate-400 rounded-full hover:bg-slate-700 hover:text-white transition-colors shadow-lg shadow-black/30">
                 <HelpCircle size={20} />
             </button>
+
+            {/* Apply Leave Modal */}
+            <ApplyLeaveModal 
+                isOpen={isModalOpen} 
+                onClose={() => setIsModalOpen(false)} 
+                onSuccess={() => window.location.reload()} 
+            />
         </div>
     );
 };

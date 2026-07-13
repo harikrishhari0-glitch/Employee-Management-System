@@ -2,40 +2,75 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedLayout from './layouts/ProtectedLayout';
-import Login from './pages/auth/Login';
-import Dashboard from './pages/employee/Dashboard';
-import ApplyLeave from './pages/employee/ApplyLeave';
-import LeaveHistory from './pages/employee/LeaveHistory';
-import LeaveBalance from './pages/employee/LeaveBalance';
-import AdminDashboard from './pages/admin/AdminDashboard';
-import AdminRequests from './pages/admin/AdminRequests';
-import NotFound from './pages/NotFound';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+// ─── Module 5: Leave Management (Harsha) ───────────────────────────
+import Login        from './pages/auth/Login';
+import LeaveManagement from './pages/employee/LeaveManagement';
+import LeaveApproval   from './pages/admin/LeaveApproval';
+// ───────────────────────────────────────────────────────────────────
+
+// ─── Module 1: Dashboard ── Add your imports here ──────────────────
+// import Dashboard from './pages/employee/Dashboard';
+// ───────────────────────────────────────────────────────────────────
+
+// ─── Module 2: Attendance ── Add your imports here ─────────────────
+// import Attendance from './pages/employee/Attendance';
+// ───────────────────────────────────────────────────────────────────
+
+// ─── Module 3: Payroll ── Add your imports here ────────────────────
+// import Payroll from './pages/employee/Payroll';
+// ───────────────────────────────────────────────────────────────────
+
+// ─── Module 4: Training ── Add your imports here ───────────────────
+// import Training from './pages/employee/Training';
+// ───────────────────────────────────────────────────────────────────
+
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <AuthProvider>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/login" element={<Login />} />
-                
-                <Route element={<ProtectedLayout allowedRoles={['EMPLOYEE', 'ADMIN']} />}>
-                    <Route path="/" element={<Dashboard />} />
-                    <Route path="/apply" element={<ApplyLeave />} />
-                    <Route path="/history" element={<LeaveHistory />} />
-                    <Route path="/balance" element={<LeaveBalance />} />
-                </Route>
+      <BrowserRouter>
+        <Routes>
+          {/* ── Public Routes ── */}
+          <Route path="/login" element={<Login />} />
 
-                <Route path="/admin" element={<ProtectedLayout allowedRoles={['ADMIN']} />}>
-                    <Route index element={<AdminDashboard />} />
-                    <Route path="requests" element={<AdminRequests />} />
-                </Route>
+          {/* ── Employee Protected Routes ── */}
+          <Route element={<ProtectedLayout allowedRoles={['EMPLOYEE', 'ADMIN', 'HR']} />}>
 
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </BrowserRouter>
-        <ToastContainer position="top-right" autoClose={3000} />
+            {/* Module 5: Leave Management (Harsha) */}
+            <Route path="/"      element={<LeaveManagement />} />
+            <Route path="/leave" element={<LeaveManagement />} />
+
+            {/* Module 1: Dashboard — uncomment when ready */}
+            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+
+            {/* Module 2: Attendance — uncomment when ready */}
+            {/* <Route path="/attendance" element={<Attendance />} /> */}
+
+            {/* Module 3: Payroll — uncomment when ready */}
+            {/* <Route path="/payroll" element={<Payroll />} /> */}
+
+            {/* Module 4: Training — uncomment when ready */}
+            {/* <Route path="/training" element={<Training />} /> */}
+
+          </Route>
+
+          {/* ── Admin / HR Protected Routes ── */}
+          <Route path="/hr" element={<ProtectedLayout allowedRoles={['ADMIN', 'HR']} />}>
+
+            {/* Module 5: Leave Approval (Harsha) */}
+            <Route path="leave-approval" element={<LeaveApproval />} />
+
+          </Route>
+
+          {/* ── 404 ── */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+      <ToastContainer position="top-right" autoClose={3000} theme="dark" />
     </AuthProvider>
   );
 }
