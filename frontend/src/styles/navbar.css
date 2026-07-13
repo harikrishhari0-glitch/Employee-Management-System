@@ -1,0 +1,203 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    height:72px;
+
+    background:#0D1526;
+
+    border-bottom:1px solid #1B2740;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 28px;
+
+}
+
+/* ========================= */
+
+.search-container{
+
+    width:260px;
+
+    height:44px;
+
+    border-radius:12px;
+
+    background:#182235;
+
+    border:1px solid #283548;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 16px;
+
+    gap:10px;
+
+}
+
+.search-icon{
+
+    color:#6B7280;
+
+}
+
+.search-container input{
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    width:100%;
+
+    font-size:15px;
+
+}
+
+.search-container input::placeholder{
+
+    color:#6B7280;
+
+}
+
+/* ========================= */
+
+.navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+/* ========================= */
+
+.icon-button{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:12px;
+
+    border:none;
+
+    background:#182235;
+
+    color:#94A3B8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.icon-button:hover{
+
+    background:#243145;
+
+}
+
+/* ========================= */
+
+.notification-button{
+
+    position:relative;
+
+}
+
+.dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#3B82F6;
+
+    position:absolute;
+
+    right:10px;
+
+    top:10px;
+
+}
+
+/* ========================= */
+
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-left:8px;
+
+}
+
+.avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#3B82F6;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.user-info h4{
+
+    color:white;
+
+    margin:0;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.user-info p{
+
+    color:#94A3B8;
+
+    margin:2px 0 0;
+
+    font-size:13px;
+
+}

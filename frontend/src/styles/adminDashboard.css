@@ -1,0 +1,106 @@
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: #0B1120;
+}
+
+.admin-main {
+    flex: 1;
+    margin-left: 275px;
+    display: flex;
+    flex-direction: column;
+    background: #0B1120;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 36px;
+}
+
+/* Header */
+
+.admin-header {
+    margin-bottom: 28px;
+}
+
+.admin-header h1 {
+    color: #FFFFFF;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.admin-header p {
+    color: #7F92B0;
+    font-size: 20px;
+}
+
+/* Stats Cards */
+
+.admin-stats {
+    margin-bottom: 30px;
+}
+
+/* Charts */
+
+.admin-chart-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+    margin-top: 28px;
+}
+
+.admin-chart-left,
+.admin-chart-right {
+    width: 100%;
+}
+
+/* System Health */
+
+.system-health-card {
+    margin-top: 28px;
+    width: 100%;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+
+    .admin-chart-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .admin-main {
+        margin-left: 0;
+    }
+
+    .admin-content {
+        padding: 24px;
+    }
+
+    .admin-header h1 {
+        font-size: 34px;
+    }
+
+    .admin-header p {
+        font-size: 16px;
+    }
+
+    /* Stats Section */
+.admin-stats{
+    margin-top:28px;
+    margin-bottom:28px;
+}
+
+/* System Health */
+.admin-system-health{
+    margin-top:28px;
+    width:100%;
+}
+
+}

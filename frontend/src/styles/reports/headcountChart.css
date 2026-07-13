@@ -1,0 +1,51 @@
+.headcount-card{
+    background:#182437;
+    border:1px solid #22344d;
+    border-radius:20px;
+    padding:28px;
+    height:100%;
+}
+
+.headcount-header{
+    margin-bottom:18px;
+}
+
+.headcount-header h3{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+.headcount-header p{
+    color:#7F92B0;
+    margin-top:5px;
+    font-size:15px;
+}
+
+.headcount-chart{
+    height:320px;
+}
+
+.headcount-tooltip{
+    background:#182437;
+    border:1px solid #2B3B54;
+    border-radius:14px;
+    padding:14px 18px;
+}
+
+.headcount-tooltip h4{
+    color:white;
+    margin-bottom:10px;
+    font-size:16px;
+}
+
+.headcount-tooltip p{
+    color:#6EA8FF;
+    font-size:15px;
+}
+
+.headcount-tooltip span{
+    color:white;
+    margin-left:8px;
+    font-weight:700;
+}

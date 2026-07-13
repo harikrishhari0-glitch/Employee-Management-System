@@ -1,0 +1,64 @@
+.reports-tabs{
+
+    display:flex;
+
+    gap:34px;
+
+    margin-top:30px;
+
+    border-bottom:1px solid #1F2B43;
+
+    padding-bottom:0;
+}
+
+.report-tab{
+
+    background:none;
+
+    border:none;
+
+    color:#7E8FAE;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    padding:0 0 18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    position:relative;
+}
+
+.report-tab:hover{
+
+    color:#FFFFFF;
+}
+
+.report-tab.active{
+
+    color:#FFFFFF;
+
+    font-weight:600;
+}
+
+.report-tab.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-1px;
+
+    width:100%;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:#4F8CFF;
+}

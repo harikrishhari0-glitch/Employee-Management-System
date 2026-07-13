@@ -1,0 +1,78 @@
+.personal-info-card{
+    background:#162235;
+    border:1px solid #24334D;
+    border-radius:20px;
+    padding:30px;
+}
+
+.personal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.personal-header h2{
+    color:white;
+    font-size:26px;
+    font-weight:700;
+}
+
+.save-btn{
+    background:#3B82F6;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#2563EB;
+}
+
+.personal-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    color:#90A4C5;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:500;
+}
+
+.form-group input,
+.form-group textarea{
+    background:#0F1B2D;
+    border:1px solid #2C3E58;
+    border-radius:10px;
+    padding:14px 16px;
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#3B82F6;
+}
+
+.form-group textarea{
+    resize:none;
+}
+
+.full-width{
+    grid-column:1/3;
+}

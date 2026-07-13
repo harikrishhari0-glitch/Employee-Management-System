@@ -1,0 +1,26 @@
+.performance-rating-card{
+    background:#111C2D;
+    border:1px solid #1F2D44;
+    border-radius:18px;
+    padding:24px;
+    width:100%;
+    min-height:430px;
+}
+
+.performance-rating-header{
+    margin-bottom:18px;
+}
+
+.performance-rating-header h3{
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+}
+
+.recharts-cartesian-grid line{
+    stroke:#23324B;
+}
+
+.recharts-text{
+    fill:#7B8DAE;
+}

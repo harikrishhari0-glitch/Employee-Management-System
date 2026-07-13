@@ -1,0 +1,38 @@
+.employee-sidebar{
+    width:260px;
+    height:100vh;
+    background:#111C2E;
+    padding:24px;
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+.employee-logo{
+    margin-bottom:40px;
+}
+
+.employee-logo h2{
+    font-size:26px;
+}
+
+.sidebar-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    margin-bottom:10px;
+    color:#93A4BF;
+    text-decoration:none;
+    border-radius:12px;
+}
+
+.sidebar-item:hover{
+    background:#1B2B44;
+}
+
+.sidebar-item.active{
+    background:#2563EB;
+    color:white;
+}

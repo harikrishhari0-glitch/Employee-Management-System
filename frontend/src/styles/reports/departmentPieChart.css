@@ -1,0 +1,26 @@
+.department-card{
+    background:#182438;
+    border:1px solid #263752;
+    border-radius:22px;
+    padding:28px;
+    height:430px;
+}
+
+.department-header h3{
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.department-header p{
+    color:#8393B2;
+    font-size:14px;
+}
+
+.department-chart{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:340px;
+}

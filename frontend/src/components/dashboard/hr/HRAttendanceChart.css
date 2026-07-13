@@ -1,0 +1,46 @@
+.attendance-card{
+    background:#162235;
+    border:1px solid #24344F;
+    border-radius:20px;
+    padding:26px;
+    height:100%;
+    min-height:520px;
+    display:flex;
+    flex-direction:column;
+}
+
+.chart-header{
+    margin-bottom:22px;
+}
+
+.chart-header h3{
+    color:#FFFFFF;
+    font-size:18px;
+    font-weight:600;
+    margin:0 0 8px;
+}
+
+.chart-header p{
+    color:#8EA1C1;
+    font-size:15px;
+    margin:0;
+}
+
+.recharts-responsive-container{
+    flex:1;
+}
+
+.recharts-cartesian-grid line{
+    stroke:#2A3A55;
+    stroke-dasharray:3 3;
+}
+
+.recharts-x-axis text,
+.recharts-y-axis text{
+    fill:#8EA1C1;
+    font-size:13px;
+}
+
+.recharts-tooltip-wrapper{
+    outline:none;
+}

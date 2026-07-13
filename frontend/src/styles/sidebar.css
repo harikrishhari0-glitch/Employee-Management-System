@@ -1,0 +1,168 @@
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: #0d1526;
+    border-right: 1px solid #1b2740;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+/* ===========================
+   TOP
+=========================== */
+
+.sidebar-top {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #1b2740;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #3b82f6;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.logo span {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.menu-icon {
+    color: #64748b;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ===========================
+   PORTAL TITLE
+=========================== */
+
+.portal-title {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 18px 24px;
+    border-bottom: 1px solid #1b2740;
+}
+
+/* ===========================
+   MENU
+=========================== */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 12px;
+    margin: 0;
+    flex: 1;
+}
+
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 46px;
+    padding: 0 18px;
+    color: #b7c2d4;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all .25s ease;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar-menu li svg {
+    font-size: 20px;
+}
+
+.sidebar-menu li:hover {
+    background: #16233b;
+    color: white;
+}
+
+.sidebar-menu li.active {
+    background: #1d4ed8;
+    color: white;
+    box-shadow: 0 0 18px rgba(59,130,246,.25);
+}
+
+.sidebar-menu li.active svg {
+    color: white;
+}
+
+/* ===========================
+   PROFILE
+=========================== */
+
+.sidebar-profile {
+    border-top: 1px solid #1b2740;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.sidebar-profile h4 {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.sidebar-profile p {
+    color: #94a3b8;
+    margin: 4px 0 0;
+    font-size: 13px;
+}
+
+.sidebar-profile svg:last-child {
+    margin-left: auto;
+    color: #64748b;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sidebar-profile svg:last-child:hover {
+    color: white;
+}

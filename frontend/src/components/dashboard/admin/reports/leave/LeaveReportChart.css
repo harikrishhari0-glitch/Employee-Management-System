@@ -1,0 +1,89 @@
+.leave-card{
+    background:#111C2D;
+    border:1px solid #1D2B42;
+    border-radius:18px;
+    padding:24px;
+    width:100%;
+    min-height:480px;
+    box-sizing:border-box;
+}
+
+.leave-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.leave-header h3{
+    color:#FFFFFF;
+    font-size:24px;
+    font-weight:700;
+    margin:0;
+}
+
+.leave-header p{
+    color:#7E93B5;
+    font-size:15px;
+    margin-top:6px;
+}
+
+.recharts-wrapper{
+    font-family:Inter,sans-serif;
+}
+
+.recharts-cartesian-grid line{
+    stroke:#24324B;
+}
+
+.recharts-text{
+    fill:#7D91B1;
+    font-size:14px;
+}
+
+.recharts-default-tooltip{
+    background:#172235 !important;
+    border:1px solid #2B3D59 !important;
+    border-radius:12px !important;
+}
+
+.recharts-tooltip-label{
+    color:#FFFFFF !important;
+}
+
+.recharts-legend-wrapper{
+    padding-top:18px;
+}
+
+.recharts-legend-item-text{
+    color:#D5E2FF !important;
+    font-size:14px;
+}
+
+.recharts-bar-rectangle path{
+    transition:.25s;
+}
+
+.recharts-bar-rectangle:hover path{
+    opacity:.85;
+}
+
+@media(max-width:1200px){
+
+.leave-card{
+    min-height:430px;
+}
+
+}
+
+@media(max-width:900px){
+
+.leave-card{
+    padding:18px;
+}
+
+.leave-header h3{
+    font-size:20px;
+}
+
+}

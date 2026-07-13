@@ -1,0 +1,201 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.admin-navbar{
+
+    height:80px;
+
+    background:#0F172A;
+
+    border-bottom:1px solid #1E293B;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+
+.admin-search{
+
+    width:360px;
+
+    height:46px;
+
+    background:#172235;
+
+    border:1px solid #22314B;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 16px;
+
+    gap:12px;
+}
+
+.search-icon{
+
+    color:#64748B;
+
+    font-size:20px;
+}
+
+.admin-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:15px;
+}
+
+.admin-search input::placeholder{
+
+    color:#64748B;
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.admin-navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+}
+
+/* ===========================
+   ICON BUTTONS
+=========================== */
+
+.admin-icon-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#172235;
+
+    color:#CBD5E1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    position:relative;
+
+    transition:0.3s;
+}
+
+.admin-icon-btn svg{
+
+    font-size:22px;
+}
+
+.admin-icon-btn:hover{
+
+    background:#1E293B;
+}
+
+/* ===========================
+   NOTIFICATION
+=========================== */
+
+.notification-badge{
+
+    width:8px;
+
+    height:8px;
+
+    background:#3B82F6;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+}
+
+/* ===========================
+   USER
+=========================== */
+
+.admin-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.admin-avatar{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:#D97706;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    font-size:15px;
+}
+
+.admin-user h4{
+
+    color:white;
+
+    font-size:15px;
+
+    margin:0;
+}
+
+.admin-user p{
+
+    color:#64748B;
+
+    font-size:13px;
+
+    margin-top:3px;
+}

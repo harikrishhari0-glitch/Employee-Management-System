@@ -1,0 +1,68 @@
+.reports-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:30px;
+}
+
+.reports-title h1{
+
+    color:#FFFFFF;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+    letter-spacing:-0.5px;
+}
+
+.reports-title p{
+
+    color:#8393B2;
+
+    font-size:19px;
+
+    font-weight:400;
+}
+
+.export-btn{
+
+    height:46px;
+
+    padding:0 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#22324A;
+
+    border:1px solid #31425E;
+
+    border-radius:14px;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.export-btn:hover{
+
+    background:#2C3E59;
+}

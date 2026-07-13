@@ -1,0 +1,47 @@
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+
+.app-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#0B1120;
+
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.main-wrapper{
+
+    flex:1;
+
+    margin-left:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:100vh;
+
+    background:#0B1120;
+
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.page-content{
+
+    padding:32px;
+
+    background:#0B1120;
+
+    flex:1;
+
+}

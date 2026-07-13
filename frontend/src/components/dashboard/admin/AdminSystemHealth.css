@@ -1,0 +1,171 @@
+.system-health-card{
+
+    background:#162235;
+
+    border:1px solid #24344F;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    margin-top:28px;
+
+}
+
+.system-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.system-header h3{
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.refresh-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:none;
+
+    border:none;
+
+    color:#7F93B4;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+}
+
+.system-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.system-item{
+
+    background:#1E2B42;
+
+    border-radius:14px;
+
+    height:74px;
+
+    padding:0 18px;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.system-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    margin-right:16px;
+
+}
+
+.system-icon.green{
+
+    background:rgba(16,185,129,.15);
+
+    color:#00E599;
+
+}
+
+.system-icon.yellow{
+
+    background:rgba(245,158,11,.15);
+
+    color:#FFC107;
+
+}
+
+.system-info{
+
+    flex:1;
+
+}
+
+.system-info h4{
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    margin-bottom:4px;
+
+}
+
+.system-info p{
+
+    color:#7F93B4;
+
+    font-size:14px;
+
+}
+
+.status-badge{
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.status-badge.green{
+
+    color:#00E599;
+
+    background:rgba(16,185,129,.15);
+
+}
+
+.status-badge.yellow{
+
+    color:#FFC107;
+
+    background:rgba(245,158,11,.15);
+
+}

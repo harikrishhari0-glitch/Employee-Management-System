@@ -1,0 +1,42 @@
+.payroll-card{
+
+    width:100%;
+
+    background:#162235;
+
+    border:1px solid #263854;
+
+    border-radius:18px;
+
+    padding:26px;
+
+    box-sizing:border-box;
+}
+
+.payroll-card h3{
+
+    color:white;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+}
+
+.recharts-default-tooltip{
+
+    border-radius:14px !important;
+}
+
+.recharts-legend-item{
+
+    margin-right:28px !important;
+
+    font-size:15px;
+}
+
+.recharts-cartesian-grid line{
+
+    opacity:.6;
+}
