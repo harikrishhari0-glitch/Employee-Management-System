@@ -6,30 +6,12 @@ import {
   YAxis,
   Tooltip,
   CartesianGrid,
-  Cell,
 } from "recharts";
 
 import "./HRAttendanceChart.css";
 
-const data = [
-  { department: "Engineering", attendance: 96, color: "#4F86F7" },
-  { department: "Design", attendance: 98, color: "#29C5E8" },
-  { department: "Marketing", attendance: 91, color: "#9B7CF5" },
-  { department: "Sales", attendance: 89, color: "#38D39F" },
-  { department: "HR", attendance: 99, color: "#FF9640" },
-  { department: "Finance", attendance: 97, color: "#EC66B3" },
-];
+function HRAttendanceChart({ data = [] }) {
 
-const colors = [
-  "#3B82F6",
-  "#60A5FA",
-  "#3B82F6",
-  "#60A5FA",
-  "#3B82F6",
-  "#60A5FA",
-];
-
-function HRAttendanceChart() {
   return (
     <div className="attendance-card">
 
@@ -38,47 +20,62 @@ function HRAttendanceChart() {
         <p>Current month's attendance percentage</p>
       </div>
 
-      <ResponsiveContainer width="100%" height={320}>
-        <BarChart
-          data={data}
-          margin={{
-            top: 20,
-            right: 10,
-            left: -15,
-            bottom: 5,
-          }}
-        >
-          <XAxis
-            dataKey="department"
-            tick={{ fill: "#8EA1C1", fontSize: 13 }}
-            axisLine={false}
-            tickLine={false}
-          />
+      <div style={{ width: "100%", height: "320px" }}>
 
-          <YAxis
-            domain={[80, 100]}
-            tick={{ fill: "#8EA1C1" }}
-            axisLine={false}
-            tickLine={false}
-          />
+        <ResponsiveContainer width="100%" height="100%">
 
-          <Tooltip />
-
-          <Bar
-             dataKey="attendance"
-             radius={[8, 8, 0, 0]}
-             barSize={38}
+          <BarChart
+            data={data}
+            margin={{
+              top: 20,
+              right: 10,
+              left: -15,
+              bottom: 5,
+            }}
           >
-            {data.map((entry, index) => (
-                <Cell
-                  key={index}
-                  fill={entry.color}
-                />
-            ))}
-          </Bar>
 
-        </BarChart>
-      </ResponsiveContainer>
+            <CartesianGrid
+              stroke="#2A3A55"
+              strokeDasharray="3 3"
+              vertical={false}
+            />
+
+            <XAxis
+              dataKey="department"
+              tick={{ fill: "#8EA1C1", fontSize: 13 }}
+              axisLine={false}
+              tickLine={false}
+            />
+
+            <YAxis
+              domain={[80, 100]}
+              tick={{ fill: "#8EA1C1", fontSize: 13 }}
+              axisLine={false}
+              tickLine={false}
+            />
+
+            <Tooltip
+              cursor={{ fill: "rgba(59,130,246,0.08)" }}
+              contentStyle={{
+                background: "#162235",
+                border: "1px solid #24344F",
+                borderRadius: "10px",
+                color: "#fff",
+              }}
+            />
+
+            <Bar
+              dataKey="attendance"
+              fill="#3B82F6"
+              radius={[8, 8, 0, 0]}
+              barSize={38}
+            />
+
+          </BarChart>
+
+        </ResponsiveContainer>
+
+      </div>
 
     </div>
   );

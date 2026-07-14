@@ -9,15 +9,6 @@ import {
   Cell,
 } from "recharts";
 
-const attendanceData = [
-  { month: "Jan", attendance: 91 },
-  { month: "Feb", attendance: 88 },
-  { month: "Mar", attendance: 95 },
-  { month: "Apr", attendance: 90 },
-  { month: "May", attendance: 97 },
-  { month: "Jun", attendance: 94 },
-];
-
 const colors = [
   "#F59E0B",
   "#FBBF24",
@@ -27,7 +18,7 @@ const colors = [
   "#F59E0B",
 ];
 
-function AttendanceChart() {
+function AttendanceChart({ data }) {
   return (
     <div className="bg-[#111827] rounded-2xl border border-slate-700 p-6">
 
@@ -48,7 +39,7 @@ function AttendanceChart() {
         <ResponsiveContainer width="100%" height="100%">
 
           <BarChart
-            data={attendanceData}
+            data={data}
             margin={{
               top: 10,
               right: 10,
@@ -92,10 +83,10 @@ function AttendanceChart() {
               radius={[8, 8, 0, 0]}
               barSize={38}
             >
-              {attendanceData.map((entry, index) => (
+              {data.map((entry, index) => (
                 <Cell
                   key={index}
-                  fill={colors[index]}
+                  fill={colors[index % colors.length]}
                 />
               ))}
             </Bar>

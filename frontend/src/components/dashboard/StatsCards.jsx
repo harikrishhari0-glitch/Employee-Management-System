@@ -5,42 +5,43 @@ import {
   Wallet,
 } from "lucide-react";
 
-const stats = [
-  {
-    title: "Attendance",
-    value: "96%",
-    subtitle: "This Month",
-    icon: <CheckCircle size={22} />,
-    color: "bg-emerald-500",
-  },
-  {
-    title: "Tasks",
-    value: "12",
-    subtitle: "Completed",
-    icon: <Users size={22} />,
-    color: "bg-blue-500",
-  },
-  {
-    title: "Leave Balance",
-    value: "08",
-    subtitle: "Remaining",
-    icon: <Calendar size={22} />,
-    color: "bg-orange-500",
-  },
-  {
-    title: "Salary",
-    value: "₹52K",
-    subtitle: "This Month",
-    icon: <Wallet size={22} />,
-    color: "bg-purple-500",
-  },
-];
+function StatsCards({ stats }) {
 
-function StatsCards() {
+  const cards = [
+    {
+      title: "Total Employees",
+      value: stats.totalEmployees,
+      subtitle: "Live from Database",
+      icon: <Users size={22} />,
+      color: "bg-blue-500",
+    },
+    {
+      title: "Active Employees",
+      value: stats.activeEmployees,
+      subtitle: "Currently Active",
+      icon: <CheckCircle size={22} />,
+      color: "bg-emerald-500",
+    },
+    {
+      title: "On Leave",
+      value: stats.onLeave,
+      subtitle: "Demo Data",
+      icon: <Calendar size={22} />,
+      color: "bg-orange-500",
+    },
+    {
+      title: "Avg Attendance",
+      value: `${stats.avgAttendance}%`,
+      subtitle: "Demo Data",
+      icon: <Wallet size={22} />,
+      color: "bg-purple-500",
+    },
+  ];
+
   return (
     <div className="grid grid-cols-4 gap-6">
 
-      {stats.map((item, index) => (
+      {cards.map((item, index) => (
 
         <div
           key={index}

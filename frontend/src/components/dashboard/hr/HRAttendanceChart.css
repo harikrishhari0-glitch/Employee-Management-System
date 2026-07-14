@@ -26,10 +26,6 @@
     margin:0;
 }
 
-.recharts-responsive-container{
-    flex:1;
-}
-
 .recharts-cartesian-grid line{
     stroke:#2A3A55;
     stroke-dasharray:3 3;

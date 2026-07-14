@@ -8,18 +8,16 @@ import {
 
 import "./HRDepartmentChart.css";
 
-const data = [
-  { name: "Engineering", value: 42, color: "#3B82F6" },
-  { name: "Design", value: 15, color: "#8B5CF6" },
-  { name: "Marketing", value: 18, color: "#10B981" },
-  { name: "Sales", value: 25, color: "#06B6D4" },
-  { name: "HR", value: 8, color: "#F59E0B" },
-  { name: "Finance", value: 10, color: "#EF4444" },
+const colors = [
+  "#3B82F6",
+  "#8B5CF6",
+  "#10B981",
+  "#06B6D4",
+  "#F59E0B",
+  "#EF4444",
 ];
 
-const totalEmployees = data.reduce((sum, item) => sum + item.value, 0);
-
-const CustomTooltip = ({ active, payload }) => {
+const CustomTooltip = ({ active, payload, totalEmployees }) => {
   if (active && payload && payload.length) {
     const item = payload[0].payload;
 
@@ -62,7 +60,18 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-function HRDepartmentChart() {
+function HRDepartmentChart({ data }) {
+
+  const departmentData = data.map((item, index) => ({
+    ...item,
+    color: colors[index % colors.length],
+  }));
+
+  const totalEmployees = departmentData.reduce(
+    (sum, item) => sum + item.value,
+    0
+  );
+
   return (
     <div className="department-card">
 
@@ -80,12 +89,14 @@ function HRDepartmentChart() {
             <PieChart>
 
               <Tooltip
-                content={<CustomTooltip />}
                 cursor={false}
+                content={
+                  <CustomTooltip totalEmployees={totalEmployees} />
+                }
               />
 
               <Pie
-                data={data}
+                data={departmentData}
                 dataKey="value"
                 cx="50%"
                 cy="50%"
@@ -96,7 +107,7 @@ function HRDepartmentChart() {
                 strokeWidth={3}
                 isAnimationActive={false}
               >
-                {data.map((entry) => (
+                {departmentData.map((entry) => (
                   <Cell
                     key={entry.name}
                     fill={entry.color}
